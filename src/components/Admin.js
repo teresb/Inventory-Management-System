@@ -94,11 +94,11 @@ function Admin() {
             <h3>Product List</h3>
             <ul>
                 {products.map(product => (
-                    <li key={product._id}>
-                        {product.name} - ${product.price} - {product.quantity} units
+                    <form key={product._id}>
+                        {product.name} - {product.price}Frs - {product.quantity}
                         <button onClick={() => handleEditProduct(product)}>Edit</button>
                         <button onClick={() => handleDeleteProduct(product._id)}>Delete</button>
-                    </li>
+                    </form>
                 ))}
             </ul>
         </div>
